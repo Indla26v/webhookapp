@@ -10,7 +10,6 @@ public class SqlSolverService {
     private static final Logger logger = LoggerFactory.getLogger(SqlSolverService.class);
 
     public String getSolutionForRegistrationNumber(String regNo) {
-        // Extract last two digits
         String lastTwoDigits = regNo.substring(regNo.length() - 2);
         int lastTwoDigitsInt;
 
@@ -32,7 +31,6 @@ public class SqlSolverService {
     }
 
     private String getQuestion1Solution() {
-        // Question 1 solution - Complex query for employee analytics
         return """
             WITH DepartmentStats AS (
                 SELECT 
@@ -66,7 +64,6 @@ public class SqlSolverService {
     }
 
     private String getQuestion2Solution() {
-        // Question 2 solution - Customer order analytics
         return """
             WITH CustomerMetrics AS (
                 SELECT 
@@ -112,7 +109,6 @@ public class SqlSolverService {
     }
 
     private String getDefaultSolution() {
-        // Fallback solution
         return """
             SELECT 
                 id,
